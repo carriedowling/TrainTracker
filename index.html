@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Train Track[er]s</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- inserting bootstrap link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+	<!-- main container -->
+	<div class="container">
+		<!-- JUMBOTRONNNNNNNNNNNN -->
+		<div class="jumbotron" style="text-align:center; background-color: gray">
+			<h1 style="color: black">Train Track[er]s</h1>
+			<p>
+				<h4 style="color: black">All Aboard the Party Train</h4>
+			</p>
+		</div>
+
+		<!-- any current trains -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<strong>Real-Time Train Tracking</strong>
+				</h3>
+			</div>
+
+			<div class="panel-body">
+				<table class="table" id="trains">
+					<thead>
+						<th style="font-weight: bold">Train Name</th>
+						<th style="font-weight: bold">Destination</th>
+						<th style="font-weight: bold">Frequency (min)</th>
+						<th style="font-weight: bold">Next Arrival</th>
+						<th style="font-weight: bold">Minutes Away</th>
+					</thead>
+					<tbody id="newTrains"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- user adding the train  -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<strong>Add Train</strong>
+				</h3>
+			</div>
+
+			<div class="panel-body">
+				<form>
+					<!-- opening textboxes -->
+					<div class="form-group">
+						<label for="">Train Name</label>
+						<input type="text" class="form-control" id="nameInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Destination</label>
+						<input type="text" class="form-control" id="destinationInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">First Train Time (HH:mm - military time)</label>
+						<input type="text" class="form-control" id="firstTrainInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Frequency (min)</label>
+						<input type="text" class="form-control" id="frequencyInput">
+					</div>
+
+					<!-- inserting the submit button -->
+					<button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- linking jquery -->
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- inserting firebase -->
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<!-- linking the moment.js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="logic.js"></script>
+</body>
+
+</html>
